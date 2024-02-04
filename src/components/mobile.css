@@ -1,0 +1,12 @@
+@media screen and (max-width: 500px) {
+    .sidebar{
+       width:20px;
+    }
+    .dropbox{
+       margin-left: 1px;
+    }
+    .homelogo{
+        width:20px;
+        height:20px;
+    }
+}

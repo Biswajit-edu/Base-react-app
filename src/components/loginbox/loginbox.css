@@ -1,0 +1,133 @@
+
+
+/* Button Group */
+.from{
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .btn-group .btn {
+    display: flex;
+    align-items: center;
+    column-gap: 0px;
+    width: 190px;
+    font-size: 0.8rem;
+    height: 40px;
+    font-weight: 500;
+    padding: 2px 4px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    transform: scale(1);
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.5s, color 0.5s;
+  }
+  .frombox{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .btn-group .btn:focus {
+    transform: scale(0.97);
+  }
+  
+  .btn-group .btn:hover {
+    background-color: #605BFF;
+    color: #eee;
+  }
+  
+  .btn img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .logox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f6f6;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  
+  
+  /* Inputs and Labels */
+  
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    outline: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 4px 0 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.5s;
+    display: block;
+  }
+  
+  input:focus {
+    border: 2px solid #605BFF;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #000;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  label {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  /* Login Button */
+  
+  .login-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 24px;
+    margin: 12px 0 24px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #605BFF;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  
+  /* Links */
+  
+  .links {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  a {
+    color: #605BFF;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    transition: all 0.4s ease;
+  }
+  
+  a:hover {
+    color: rgb(13, 133, 185);
+  }
