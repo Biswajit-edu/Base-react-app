@@ -1,7 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from 'react-router-dom';
 import "./loginbox.css";
+import { GoogleLogin } from "react-google-login";
+import { gapi } from "gapi-script";
 const loginbox = () => {
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId:
+          "316164397011-unbfb8qa8k4e5clij94i1ng1upmpe3ot.apps.googleusercontent.com",
+        scope: "email",
+      });
+    }
+    gapi.load("client:auth2", start);
+  }, []);
+  const onSuccess = (response) => {
+    const Email = response?.profileObj.email;
+  };
+  const onFailure = (response) => {
+    console.log("Failed", response);
+  };
   return (
     <div>
       <form class="from">
@@ -18,7 +36,18 @@ const loginbox = () => {
               src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d1c98974-c62d-4071-8bd2-ab859fc5f4e9"
               alt=""
             />
-            <span className=" ml-4">Sign in with Google</span>
+            <GoogleLogin
+               clientId={
+                "316164397011-unbfb8qa8k4e5clij94i1ng1upmpe3ot.apps.googleusercontent.com"
+              }
+              onSuccess={onSuccess}
+              onFailure={onFailure}
+              render={(renderProps) => (
+                <p onClick={renderProps.onClick} className="Auth_Btn">
+                <span className=" ml-4">Sign in with Google</span>
+                </p>
+               )}
+            />
           </button>
           <button class="btn">
             <img
