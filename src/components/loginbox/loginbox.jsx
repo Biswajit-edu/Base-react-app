@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import {React, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import "./loginbox.css";
 import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
-const loginbox = () => {
+const Loginbox = () => {
   useEffect(() => {
     function start() {
       gapi.client.init({
@@ -93,4 +93,4 @@ const loginbox = () => {
   );
 };
 
-export default loginbox;
+export default Loginbox;
