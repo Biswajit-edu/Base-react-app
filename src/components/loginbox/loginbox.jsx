@@ -27,7 +27,7 @@ const loginbox = () => {
            Sign In
         </div>
         <div className=" mb-4 ml-2">
-          sign in to your account.
+          sign in your account.
         </div>
         <div class="btn-group gap-x-2">
           <button class="btn">
